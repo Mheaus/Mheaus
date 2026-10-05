@@ -4,35 +4,34 @@ const LOGIN = 'Mheaus';
 const LANG_WINDOW_YEARS = 4;
 const OUT = new URL('../assets/', import.meta.url);
 
-const C = {
-  void: '#23272E',
-  magenta: '#FF2A6D',
-  cyan: '#05D9E8',
-  ice: '#D1F7FF',
-  amber: '#FFB000',
-  dim: '#5B6371',
+const THEMES = {
+  dark: { suffix: '', void: '#23272E', magenta: '#FF2A6D', cyan: '#05D9E8', ice: '#D1F7FF', amber: '#FFB000', dim: '#5B6371', scan: 0.35, glow: 1 },
+  light: { suffix: '-light', void: '#E4E7EB', magenta: '#D90F5A', cyan: '#00879A', ice: '#1E232A', amber: '#B97A00', dim: '#8B93A0', scan: 0.06, glow: 0.4 },
 };
+
+// The render functions read the active palette from C. Set C before each render pass.
+let C = THEMES.dark;
 
 const MONO = `'JetBrains Mono','SF Mono',Menlo,Consolas,'Liberation Mono',monospace`;
 
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
-const defs = `
+const defs = () => `
   <defs>
     <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
-      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feGaussianBlur stdDeviation="${2.4 * C.glow}" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="glow-soft" x="-10%" y="-50%" width="120%" height="200%">
-      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feGaussianBlur stdDeviation="${1.2 * C.glow}" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
       <path d="M24 0H0V24" fill="none" stroke="${C.cyan}" stroke-opacity=".07"/>
     </pattern>
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#000" fill-opacity=".35"/>
+      <rect width="4" height="1" fill="#000" fill-opacity="${C.scan}"/>
     </pattern>
     <pattern id="hazard" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="8" height="16" fill="${C.amber}"/>
@@ -109,7 +108,7 @@ function header() {
     @keyframes pulse { 0%,100% { fill-opacity: .08; } 50% { fill-opacity: .45; } }
     .sweep { animation: sweep 5s linear infinite; }
     @keyframes sweep { from { transform: translateY(-40px); } to { transform: translateY(${H}px); } }
-  </style>${defs}
+  </style>${defs()}
   ${frame(W, H, 'MHEAUS://SYS — TERMINAL DOGMA', 'EVA-UNIT // RX-78 // VF-1')}
 
   <rect x="0" y="40" width="${W}" height="10" fill="url(#hazard)" opacity=".85"/>
@@ -251,7 +250,7 @@ function stats(s) {
   <style>${baseStyle}
     .bar { transform-box: fill-box; transform-origin: left; animation: grow 1.2s cubic-bezier(.2,.8,.2,1) both; }
     @keyframes grow { from { transform: scaleX(0); } }
-  </style>${defs}
+  </style>${defs()}
   ${frame(W, H, 'SYS.STATUS — PILOT TELEMETRY', `UPDATED ${stamp}`)}
   ${gaugeSvg}
   <g transform="translate(40 170)">
@@ -277,21 +276,21 @@ function card({ code, name, desc, tag, accent }) {
   <style>${baseStyle}
     .edge { animation: edge 4s ease-in-out infinite; }
     @keyframes edge { 0%,100% { stroke-opacity: .35; } 50% { stroke-opacity: 1; } }
-  </style>${defs}
+  </style>${defs()}
   ${frame(W, H, `UNIT ${code}`, tag)}
-  <rect x="24" y="44" width="4" height="72" fill="${accent}" filter="url(#glow-soft)"/>
+  <rect x="24" y="44" width="4" height="72" fill="${C[accent]}" filter="url(#glow-soft)"/>
   <text x="44" y="72" font-size="26" font-weight="700" fill="${C.ice}" filter="url(#glow-soft)">${esc(name)}</text>
   <text x="44" y="102" font-size="14" fill="${C.cyan}">${esc(desc)}</text>
-  <path d="M${W - 70} ${H - 34}h40l-10 -10" fill="none" stroke="${accent}" stroke-width="2" class="edge"/>
+  <path d="M${W - 70} ${H - 34}h40l-10 -10" fill="none" stroke="${C[accent]}" stroke-width="2" class="edge"/>
   ${scanlines(W, H)}
 </svg>`;
 }
 
 const CARDS = [
-  { file: 'unit-adbrt.svg', code: '01', name: 'adbrt.com', desc: 'Personal site — the main hangar.', tag: 'TYPESCRIPT', accent: C.magenta },
-  { file: 'unit-claude-skills.svg', code: '02', name: 'claude-skills', desc: 'Claude Code skills — autopilot modules.', tag: 'JAVASCRIPT', accent: C.cyan },
-  { file: 'unit-dotfiles.svg', code: '03', name: 'dotfiles', desc: 'Cockpit configuration.', tag: 'SHELL', accent: C.cyan },
-  { file: 'unit-three.svg', code: '04', name: 'three-js-experiment', desc: 'WebGL test flights.', tag: 'THREE.JS', accent: C.magenta },
+  { file: 'unit-adbrt', code: '01', name: 'adbrt.com', desc: 'Personal site — the main hangar.', tag: 'TYPESCRIPT', accent: 'magenta' },
+  { file: 'unit-claude-skills', code: '02', name: 'claude-skills', desc: 'Claude Code skills — autopilot modules.', tag: 'JAVASCRIPT', accent: 'cyan' },
+  { file: 'unit-dotfiles', code: '03', name: 'dotfiles', desc: 'Cockpit configuration.', tag: 'SHELL', accent: 'cyan' },
+  { file: 'unit-three', code: '04', name: 'three-js-experiment', desc: 'WebGL test flights.', tag: 'THREE.JS', accent: 'magenta' },
 ];
 
 function divider() {
@@ -301,7 +300,7 @@ function divider() {
   <style>${baseStyle}
     .run { animation: run 3s linear infinite; }
     @keyframes run { from { transform: translateX(-200px); } to { transform: translateX(${W}px); } }
-  </style>${defs}
+  </style>${defs()}
   <rect width="${W}" height="${H}" fill="${C.void}"/>
   <line x1="0" y1="12" x2="${W}" y2="12" stroke="${C.dim}"/>
   <rect y="11" width="200" height="2" fill="${C.magenta}" class="run" filter="url(#glow)"/>
@@ -320,8 +319,12 @@ const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
 const s = token ? await fetchStats(token) : FALLBACK;
 if (!token) console.warn('No GITHUB_TOKEN: stats.svg uses placeholder data.');
 
-await writeFile(new URL('header.svg', OUT), header());
-await writeFile(new URL('stats.svg', OUT), stats(s));
-await writeFile(new URL('divider.svg', OUT), divider());
-for (const c of CARDS) await writeFile(new URL(c.file, OUT), card(c));
+for (const theme of Object.values(THEMES)) {
+  C = theme;
+  const write = (name, svg) => writeFile(new URL(`${name}${theme.suffix}.svg`, OUT), svg);
+  await write('header', header());
+  await write('stats', stats(s));
+  await write('divider', divider());
+  for (const c of CARDS) await write(c.file, card(c));
+}
 console.log('assets written', { contributions: s.contributions, langs: s.topLangs.map((l) => l.name) });

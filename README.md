@@ -1,5 +1,5 @@
 <a href="https://adbrt.com">
-  <img src="assets/header.svg" width="100%" alt="MHEAUS://SYS — Mathieu Audebert, fullstack web developer in Bordeaux, founder of Sakuga Software" />
+  <picture><source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg" /><img src="assets/header.svg" width="100%" alt="MHEAUS://SYS — Mathieu Audebert, fullstack web developer in Bordeaux, founder of Sakuga Software" /></picture>
 </a>
 
 <p align="center">
@@ -18,20 +18,20 @@
   systems   TypeScript · React · Node.js · Docker · self-hosted infra
 ```
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<picture><source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg" /><img src="assets/divider.svg" width="100%" alt="" /></picture>
 
-<img src="assets/stats.svg" width="100%" alt="GitHub activity telemetry" />
+<picture><source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg" /><img src="assets/stats.svg" width="100%" alt="GitHub activity telemetry" /></picture>
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<picture><source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg" /><img src="assets/divider.svg" width="100%" alt="" /></picture>
 
 <table>
   <tr>
-    <td width="50%"><a href="https://github.com/Mheaus/adbrt.com"><img src="assets/unit-adbrt.svg" width="100%" alt="adbrt.com" /></a></td>
-    <td width="50%"><a href="https://github.com/Mheaus/claude-skills"><img src="assets/unit-claude-skills.svg" width="100%" alt="claude-skills" /></a></td>
+    <td width="50%"><a href="https://github.com/Mheaus/adbrt.com"><picture><source media="(prefers-color-scheme: light)" srcset="assets/unit-adbrt-light.svg" /><img src="assets/unit-adbrt.svg" width="100%" alt="adbrt.com" /></picture></a></td>
+    <td width="50%"><a href="https://github.com/Mheaus/claude-skills"><picture><source media="(prefers-color-scheme: light)" srcset="assets/unit-claude-skills-light.svg" /><img src="assets/unit-claude-skills.svg" width="100%" alt="claude-skills" /></picture></a></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://github.com/Mheaus/dotfiles"><img src="assets/unit-dotfiles.svg" width="100%" alt="dotfiles" /></a></td>
-    <td width="50%"><a href="https://github.com/Mheaus/three-js-experiment"><img src="assets/unit-three.svg" width="100%" alt="three-js-experiment" /></a></td>
+    <td width="50%"><a href="https://github.com/Mheaus/dotfiles"><picture><source media="(prefers-color-scheme: light)" srcset="assets/unit-dotfiles-light.svg" /><img src="assets/unit-dotfiles.svg" width="100%" alt="dotfiles" /></picture></a></td>
+    <td width="50%"><a href="https://github.com/Mheaus/three-js-experiment"><picture><source media="(prefers-color-scheme: light)" srcset="assets/unit-three-light.svg" /><img src="assets/unit-three.svg" width="100%" alt="three-js-experiment" /></picture></a></td>
   </tr>
 </table>
 
