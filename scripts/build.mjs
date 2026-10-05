@@ -134,6 +134,23 @@ function header() {
   return svg;
 }
 
+// The GraphQL calendar leaves out private work in orgs that restrict token access.
+// The public profile page counts it, so the stats use that page if the parse succeeds.
+async function fetchPublicCalendar() {
+  const res = await fetch(`https://github.com/users/${LOGIN}/contributions`);
+  if (!res.ok) return null;
+  const html = await res.text();
+  const dates = new Map([...html.matchAll(/data-date="([\d-]+)" id="([^"]+)"/g)].map((m) => [m[2], m[1]]));
+  const counts = new Map(
+    [...html.matchAll(/for="([^"]+)"[^>]*>(No|\d+) contribution/g)].map((m) => [m[1], m[2] === 'No' ? 0 : Number(m[2])]),
+  );
+  const days = [...dates]
+    .filter(([id]) => counts.has(id))
+    .sort((a, b) => a[1].localeCompare(b[1]))
+    .map(([id]) => counts.get(id));
+  return days.length > 300 ? days : null;
+}
+
 async function fetchStats(token) {
   const query = `query($login:String!){
     user(login:$login){
@@ -168,16 +185,17 @@ async function fetchStats(token) {
     .slice(0, 5)
     .map(([name, size]) => ({ name, pct: (size / total) * 100 }));
 
-  const days = cc.contributionCalendar.weeks.flatMap((w) => w.contributionDays.map((d) => d.contributionCount));
+  const days = (await fetchPublicCalendar()) ?? cc.contributionCalendar.weeks.flatMap((w) => w.contributionDays.map((d) => d.contributionCount));
 
   return {
-    contributions: cc.contributionCalendar.totalContributions,
+    contributions: days.reduce((a, b) => a + b, 0),
     prs: cc.totalPullRequestContributions,
     reviews: cc.totalPullRequestReviewContributions,
     repos: u.repositories.totalCount,
     stars: u.repositories.nodes.reduce((a, r) => a + r.stargazerCount, 0),
     followers: u.followers.totalCount,
     activeDays: days.filter((n) => n > 0).length,
+    trackedDays: days.length,
     last12w: days.slice(-84),
     topLangs,
   };
@@ -189,7 +207,7 @@ function stats(s) {
   const fmt = (n) => n.toLocaleString('en-US');
   const gauges = [
     ['CONTRIBUTIONS / 1Y', fmt(s.contributions), C.magenta],
-    ['ACTIVE DAYS', `${s.activeDays}/365`, C.cyan],
+    ['ACTIVE DAYS', `${s.activeDays}/${s.trackedDays}`, C.cyan],
     ['PULL REQUESTS', fmt(s.prs), C.ice],
     ['REVIEWS', fmt(s.reviews), C.ice],
   ];
@@ -293,7 +311,7 @@ function divider() {
 }
 
 const FALLBACK = {
-  contributions: 0, prs: 0, reviews: 0, repos: 0, stars: 0, followers: 0, activeDays: 0,
+  contributions: 0, prs: 0, reviews: 0, repos: 0, stars: 0, followers: 0, activeDays: 0, trackedDays: 365,
   last12w: Array(84).fill(0), topLangs: [{ name: 'TypeScript', pct: 100 }],
 };
 
