@@ -5,13 +5,12 @@ const LANG_WINDOW_YEARS = 4;
 const OUT = new URL('../assets/', import.meta.url);
 
 const C = {
-  void: '#01012B',
-  panel: '#060A3A',
+  void: '#23272E',
   magenta: '#FF2A6D',
   cyan: '#05D9E8',
   ice: '#D1F7FF',
   amber: '#FFB000',
-  dim: '#3B4A8C',
+  dim: '#5B6371',
 };
 
 const MONO = `'JetBrains Mono','SF Mono',Menlo,Consolas,'Liberation Mono',monospace`;

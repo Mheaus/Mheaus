@@ -3,10 +3,10 @@
 </a>
 
 <p align="center">
-  <a href="https://adbrt.com"><img src="https://img.shields.io/badge/LINK-adbrt.com-05D9E8?style=flat-square&labelColor=01012B" alt="adbrt.com" /></a>
-  <a href="https://github.com/sakuga-software"><img src="https://img.shields.io/badge/UNIT-sakuga--software-FF2A6D?style=flat-square&labelColor=01012B" alt="Sakuga Software" /></a>
-  <img src="https://img.shields.io/badge/SECTOR-Bordeaux%20%2F%20FR-D1F7FF?style=flat-square&labelColor=01012B" alt="Bordeaux, France" />
-  <img src="https://img.shields.io/badge/STATUS-available%20for%20missions-FFB000?style=flat-square&labelColor=01012B" alt="Available for freelance work" />
+  <a href="https://adbrt.com"><img src="https://img.shields.io/badge/LINK-adbrt.com-05D9E8?style=flat-square&labelColor=23272E" alt="adbrt.com" /></a>
+  <a href="https://github.com/sakuga-software"><img src="https://img.shields.io/badge/UNIT-sakuga--software-FF2A6D?style=flat-square&labelColor=23272E" alt="Sakuga Software" /></a>
+  <img src="https://img.shields.io/badge/SECTOR-Bordeaux%20%2F%20FR-D1F7FF?style=flat-square&labelColor=23272E" alt="Bordeaux, France" />
+  <img src="https://img.shields.io/badge/STATUS-available%20for%20missions-FFB000?style=flat-square&labelColor=23272E" alt="Available for freelance work" />
 </p>
 
 ```text

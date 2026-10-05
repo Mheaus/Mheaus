@@ -39,12 +39,12 @@
     </pattern>
   </defs>
   
-  <rect width="1200" height="420" fill="#01012B"/>
+  <rect width="1200" height="420" fill="#23272E"/>
   <rect width="1200" height="420" fill="url(#grid)"/>
   <path d="M10 28V10H28M1172 10H1190V28M1190 392V410H1172M28 410H10V392"
         fill="none" stroke="#05D9E8" stroke-width="2" filter="url(#glow-soft)"/>
-  <text x="38" y="23" font-size="11" fill="#3B4A8C" letter-spacing="2">MHEAUS://SYS — TERMINAL DOGMA</text>
-  <text x="1162" y="23" font-size="11" fill="#3B4A8C" letter-spacing="2" text-anchor="end">EVA-UNIT // RX-78 // VF-1</text>
+  <text x="38" y="23" font-size="11" fill="#5B6371" letter-spacing="2">MHEAUS://SYS — TERMINAL DOGMA</text>
+  <text x="1162" y="23" font-size="11" fill="#5B6371" letter-spacing="2" text-anchor="end">EVA-UNIT // RX-78 // VF-1</text>
 
   <rect x="0" y="40" width="1200" height="10" fill="url(#hazard)" opacity=".85"/>
   <text x="1160" y="68" font-size="11" fill="#FFB000" text-anchor="end" letter-spacing="3">⚠ PATTERN BLUE — NOT AN ANGEL, JUST A DEVELOPER</text>
@@ -58,35 +58,35 @@
 
   
     <g class="boot" style="animation-delay:0.25s">
-      <text x="64" y="208" font-size="15" fill="#3B4A8C">&gt; MAGI-01 MELCHIOR ........</text>
+      <text x="64" y="208" font-size="15" fill="#5B6371">&gt; MAGI-01 MELCHIOR ........</text>
       <text x="330" y="208" font-size="15" fill="#05D9E8" filter="url(#glow-soft)">ONLINE</text>
     </g>
     <g class="boot" style="animation-delay:0.53s">
-      <text x="64" y="232" font-size="15" fill="#3B4A8C">&gt; MAGI-02 BALTHASAR .......</text>
+      <text x="64" y="232" font-size="15" fill="#5B6371">&gt; MAGI-02 BALTHASAR .......</text>
       <text x="330" y="232" font-size="15" fill="#05D9E8" filter="url(#glow-soft)">ONLINE</text>
     </g>
     <g class="boot" style="animation-delay:0.81s">
-      <text x="64" y="256" font-size="15" fill="#3B4A8C">&gt; MAGI-03 CASPER ..........</text>
+      <text x="64" y="256" font-size="15" fill="#5B6371">&gt; MAGI-03 CASPER ..........</text>
       <text x="330" y="256" font-size="15" fill="#05D9E8" filter="url(#glow-soft)">ONLINE</text>
     </g>
     <g class="boot" style="animation-delay:1.09s">
-      <text x="64" y="280" font-size="15" fill="#3B4A8C">&gt; neural link .............</text>
+      <text x="64" y="280" font-size="15" fill="#5B6371">&gt; neural link .............</text>
       <text x="330" y="280" font-size="15" fill="#FF2A6D" filter="url(#glow-soft)">SYNC</text>
     </g>
     <g class="boot" style="animation-delay:1.37s">
-      <text x="64" y="304" font-size="15" fill="#3B4A8C">&gt; pilot ...................</text>
+      <text x="64" y="304" font-size="15" fill="#5B6371">&gt; pilot ...................</text>
       <text x="330" y="304" font-size="15" fill="#D1F7FF" filter="url(#glow-soft)">MATHIEU AUDEBERT</text>
     </g>
     <g class="boot" style="animation-delay:1.6500000000000001s">
-      <text x="64" y="328" font-size="15" fill="#3B4A8C">&gt; unit ....................</text>
+      <text x="64" y="328" font-size="15" fill="#5B6371">&gt; unit ....................</text>
       <text x="330" y="328" font-size="15" fill="#D1F7FF" filter="url(#glow-soft)">@sakuga-software</text>
     </g>
     <g class="boot" style="animation-delay:1.9300000000000002s">
-      <text x="64" y="352" font-size="15" fill="#3B4A8C">&gt; sector ..................</text>
+      <text x="64" y="352" font-size="15" fill="#5B6371">&gt; sector ..................</text>
       <text x="330" y="352" font-size="15" fill="#D1F7FF" filter="url(#glow-soft)">BORDEAUX / FR</text>
     </g>
     <g class="boot" style="animation-delay:2.21s">
-      <text x="64" y="376" font-size="15" fill="#3B4A8C">&gt; link ....................</text>
+      <text x="64" y="376" font-size="15" fill="#5B6371">&gt; link ....................</text>
       <text x="330" y="376" font-size="15" fill="#05D9E8" filter="url(#glow-soft)">adbrt.com</text>
     </g>
   <rect x="64" y="386" width="10" height="17" fill="#05D9E8" class="blink"/>
@@ -94,45 +94,45 @@
   <g><polygon points="882.5,193.0 860.0,206.0 837.5,193.0 837.5,167.0 860.0,154.0 882.5,167.0" fill="#FF2A6D" fill-opacity="0.18"
         stroke="#FF2A6D" stroke-width="1.2" class="pulse"
         style="animation-delay:0.0s"/><polygon points="934.5,193.0 912.0,206.0 889.5,193.0 889.5,167.0 912.0,154.0 934.5,167.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:0.3s"/><polygon points="986.5,193.0 964.0,206.0 941.5,193.0 941.5,167.0 964.0,154.0 986.5,167.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:0.6s"/><polygon points="1038.5,193.0 1016.0,206.0 993.5,193.0 993.5,167.0 1016.0,154.0 1038.5,167.0" fill="#FF2A6D" fill-opacity="0.18"
         stroke="#FF2A6D" stroke-width="1.2" class="pulse"
         style="animation-delay:0.9s"/><polygon points="1090.5,193.0 1068.0,206.0 1045.5,193.0 1045.5,167.0 1068.0,154.0 1090.5,167.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:1.2s"/><polygon points="908.5,238.0 886.0,251.0 863.5,238.0 863.5,212.0 886.0,199.0 908.5,212.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:0.3s"/><polygon points="960.5,238.0 938.0,251.0 915.5,238.0 915.5,212.0 938.0,199.0 960.5,212.0" fill="#FF2A6D" fill-opacity="0.18"
         stroke="#FF2A6D" stroke-width="1.2" class="pulse"
         style="animation-delay:0.6s"/><polygon points="1012.5,238.0 990.0,251.0 967.5,238.0 967.5,212.0 990.0,199.0 1012.5,212.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:0.9s"/><polygon points="1064.5,238.0 1042.0,251.0 1019.5,238.0 1019.5,212.0 1042.0,199.0 1064.5,212.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:1.2s"/><polygon points="1116.5,238.0 1094.0,251.0 1071.5,238.0 1071.5,212.0 1094.0,199.0 1116.5,212.0" fill="#FF2A6D" fill-opacity="0.18"
         stroke="#FF2A6D" stroke-width="1.2" class="pulse"
         style="animation-delay:1.5s"/><polygon points="882.5,283.0 860.0,296.0 837.5,283.0 837.5,257.0 860.0,244.0 882.5,257.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:0.6s"/><polygon points="934.5,283.0 912.0,296.0 889.5,283.0 889.5,257.0 912.0,244.0 934.5,257.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:0.9s"/><polygon points="986.5,283.0 964.0,296.0 941.5,283.0 941.5,257.0 964.0,244.0 986.5,257.0" fill="#FF2A6D" fill-opacity="0.18"
         stroke="#FF2A6D" stroke-width="1.2" class="pulse"
         style="animation-delay:1.2s"/><polygon points="1038.5,283.0 1016.0,296.0 993.5,283.0 993.5,257.0 1016.0,244.0 1038.5,257.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:1.5s"/><polygon points="1090.5,283.0 1068.0,296.0 1045.5,283.0 1045.5,257.0 1068.0,244.0 1090.5,257.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:1.8s"/><polygon points="908.5,328.0 886.0,341.0 863.5,328.0 863.5,302.0 886.0,289.0 908.5,302.0" fill="#FF2A6D" fill-opacity="0.18"
         stroke="#FF2A6D" stroke-width="1.2" class="pulse"
         style="animation-delay:0.9s"/><polygon points="960.5,328.0 938.0,341.0 915.5,328.0 915.5,302.0 938.0,289.0 960.5,302.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:1.2s"/><polygon points="1012.5,328.0 990.0,341.0 967.5,328.0 967.5,302.0 990.0,289.0 1012.5,302.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:1.5s"/><polygon points="1064.5,328.0 1042.0,341.0 1019.5,328.0 1019.5,302.0 1042.0,289.0 1064.5,302.0" fill="#FF2A6D" fill-opacity="0.18"
         stroke="#FF2A6D" stroke-width="1.2" class="pulse"
         style="animation-delay:1.8s"/><polygon points="1116.5,328.0 1094.0,341.0 1071.5,328.0 1071.5,302.0 1094.0,289.0 1116.5,302.0" fill="none" fill-opacity="0"
-        stroke="#3B4A8C" stroke-width="1.2" class=""
+        stroke="#5B6371" stroke-width="1.2" class=""
         style="animation-delay:2.1s"/></g>
-  <text x="886" y="372" font-size="11" fill="#3B4A8C" letter-spacing="2">[NERV] [E.F.S.F] [U.N.SPACY]</text>
+  <text x="886" y="372" font-size="11" fill="#5B6371" letter-spacing="2">[NERV] [E.F.S.F] [U.N.SPACY]</text>
 
   <rect x="0" y="0" width="1200" height="40" fill="#05D9E8" fill-opacity=".05" class="sweep"/>
   <rect width="1200" height="420" fill="url(#scan)" pointer-events="none"/>

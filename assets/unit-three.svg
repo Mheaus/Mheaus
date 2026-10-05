@@ -29,12 +29,12 @@
     </pattern>
   </defs>
   
-  <rect width="580" height="150" fill="#01012B"/>
+  <rect width="580" height="150" fill="#23272E"/>
   <rect width="580" height="150" fill="url(#grid)"/>
   <path d="M10 28V10H28M552 10H570V28M570 122V140H552M28 140H10V122"
         fill="none" stroke="#05D9E8" stroke-width="2" filter="url(#glow-soft)"/>
-  <text x="38" y="23" font-size="11" fill="#3B4A8C" letter-spacing="2">UNIT 04</text>
-  <text x="542" y="23" font-size="11" fill="#3B4A8C" letter-spacing="2" text-anchor="end">THREE.JS</text>
+  <text x="38" y="23" font-size="11" fill="#5B6371" letter-spacing="2">UNIT 04</text>
+  <text x="542" y="23" font-size="11" fill="#5B6371" letter-spacing="2" text-anchor="end">THREE.JS</text>
   <rect x="24" y="44" width="4" height="72" fill="#FF2A6D" filter="url(#glow-soft)"/>
   <text x="44" y="72" font-size="26" font-weight="700" fill="#D1F7FF" filter="url(#glow-soft)">three-js-experiment</text>
   <text x="44" y="102" font-size="14" fill="#05D9E8">WebGL test flights.</text>

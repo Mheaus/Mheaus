@@ -28,8 +28,8 @@
       <rect width="8" height="16" fill="#FFB000"/>
     </pattern>
   </defs>
-  <rect width="1200" height="24" fill="#01012B"/>
-  <line x1="0" y1="12" x2="1200" y2="12" stroke="#3B4A8C"/>
+  <rect width="1200" height="24" fill="#23272E"/>
+  <line x1="0" y1="12" x2="1200" y2="12" stroke="#5B6371"/>
   <rect y="11" width="200" height="2" fill="#FF2A6D" class="run" filter="url(#glow)"/>
   <rect x="0" y="6" width="60" height="12" fill="url(#hazard)"/>
   <rect x="1140" y="6" width="60" height="12" fill="url(#hazard)"/>
