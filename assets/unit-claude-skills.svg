@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 150" width="580" height="150" role="img" aria-label="claude-skills — Claude Code skills — autopilot modules.">
+  <style>
+    text { font-family: 'JetBrains Mono','SF Mono',Menlo,Consolas,'Liberation Mono',monospace; }
+    .blink { animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; opacity: 1 !important; }
+    }
+    .edge { animation: edge 4s ease-in-out infinite; }
+    @keyframes edge { 0%,100% { stroke-opacity: .35; } 50% { stroke-opacity: 1; } }
+  </style>
+  <defs>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#05D9E8" stroke-opacity=".07"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" fill-opacity=".35"/>
+    </pattern>
+    <pattern id="hazard" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="16" fill="#FFB000"/>
+    </pattern>
+  </defs>
+  
+  <rect width="580" height="150" fill="#01012B"/>
+  <rect width="580" height="150" fill="url(#grid)"/>
+  <path d="M10 28V10H28M552 10H570V28M570 122V140H552M28 140H10V122"
+        fill="none" stroke="#05D9E8" stroke-width="2" filter="url(#glow-soft)"/>
+  <text x="38" y="23" font-size="11" fill="#3B4A8C" letter-spacing="2">UNIT 02</text>
+  <text x="542" y="23" font-size="11" fill="#3B4A8C" letter-spacing="2" text-anchor="end">JAVASCRIPT</text>
+  <rect x="24" y="44" width="4" height="72" fill="#05D9E8" filter="url(#glow-soft)"/>
+  <text x="44" y="72" font-size="26" font-weight="700" fill="#D1F7FF" filter="url(#glow-soft)">claude-skills</text>
+  <text x="44" y="102" font-size="14" fill="#05D9E8">Claude Code skills — autopilot modules.</text>
+  <path d="M510 116h40l-10 -10" fill="none" stroke="#05D9E8" stroke-width="2" class="edge"/>
+  <rect width="580" height="150" fill="url(#scan)" pointer-events="none"/>
+</svg>
